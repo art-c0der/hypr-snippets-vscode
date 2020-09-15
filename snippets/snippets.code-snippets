@@ -1,68 +1,133 @@
 {
-  "hypr IF statement": {
-		"scope": "",
-		"prefix": "hypr:if",
+	"hypr IF statement": {
+		"prefix": "hypr: if",
 		"body": [
-			"{% if ${1:condition} %}",
+			"{% if ${1:argument} %}",
 			"$2",
 			"{% endif %}"
 		],
-		"description": "hypr: IF statement"
+		"description": "Hypr: Evaluates the contents in the tag if the argument is true."
 	},
 	"hypr IF-ELSE statement": {
-		"scope": "",
-		"prefix": "hypr:if-else",
+		"prefix": "hypr: if-else",
 		"body": [
-			"{% if ${1:condition} %}",
+			"{% if ${1:argument} %}",
 			"$2",
 			"{% else %}",
 			"$3",
 			"{% endif %}"
 		],
-		"description": "hypr: IF-ELSE statement"
+		"description": "Hypr: Evaluates the contents in the tag if the argument is true and the contents in the tag else if false."
 	},
 	"hypr FOR loop": {
-		"scope": "",
-		"prefix": "hypr:for",
+		"prefix": "hypr: for",
 		"body": [
 			"{% for ${1:item} in ${2:array} %}",
 			"$3",
 			"{% endfor %}"
 		],
-		"description": "hypr: FOR loop"
+		"description": "Hypr: Loops over each item in an array."
+	},
+	"hypr FOR loop reverse": {
+		"prefix": "hypr: for+reverse",
+		"body": [
+			"{% for ${1:item} in ${2:array} reversed %}",
+			"$3",
+			"{% endfor %}"
+		],
+		"description": "Hypr: Reversed loops over each item in an array."
 	},
 	"hypr COMMENT": {
-		"scope": "",
-		"prefix": "hypr:comment",
+		"prefix": "hypr: comment",
+		"body": [
+			"{# $1 #}"
+		],
+		"description": "Single-line comment delimiters."
+	},
+	"hypr COMMENT multiline": {
+		"prefix": "hypr: comment+multi",
 		"body": [
 			"{% comment %}",
 			"$1",
 			"{% endcomment %}"
 		],
-		"description": "hypr: COMMENT"
+		"description": "Ignores every line of code between {% comment %} and {% endcomment %}."
 	},
 	"hypr LABEL": {
-		"scope": "",
-		"prefix": "hypr:label",
+		"prefix": "hypr: label",
 		"body": [
 			"{{ labels.${1:labelName} }}"
 		],
-		"description": "hypr: LABEL"
+		"description": "Hypr: Search and paste current label."
 	},
 	"hypr INCLUDE": {
-		"scope": "",
-		"prefix": "hypr:include",
+		"prefix": "hypr: include",
 		"body": [
 			"{% include ${1:filePath} %}"
 		],
-		"description": "hypr: INCLUDE"
+		"description": "Hypr: Loads and renders an external template within the current template."
 	},
 	"hypr INCLUDE with options": {
-		"scope": "",
-		"prefix": "hypr:include+options",
+		"prefix": "hypr: include+options",
 		"body": [
-			"{% include ${1:filePath} with ${2:option} %}"
+			"{% include ${1:filePath} with ${2:model=model.testingModel} %}"
 		],
-		"description": "hypr: INCLUDE with options"
-	}
+		"description": "Hypr: Loads and renders an external template with options within the current template."
+	},
+	"hypr MAKE_URL image ": {
+		"prefix": "hypr: make+image",
+		"body": [
+			"{% make_url 'image' ${1:model.mainImage} with max=${2:maxImageWidth} quality=${3:80} as_parameter %}"
+		],
+		"description": "Hypr: The 'image' mode generates a path to the CDN location for the specified image model. You can add image fields to the URL, such as size and quality fields, by including the parameters between the keywords with and as_parameter at the end of the tag. \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#make_url"
+	},
+	"hypr MAKE_URL product ": {
+		"prefix": "hypr: make+product",
+		"body": [
+			"{% make_url 'product' ${1:productCode} with variant=${2:small-green} as_parameter %}"
+		],
+		"description": "Hypr: The 'product' mode generates a path to a product page based on a product model, product code, or product ID. You can also specify a variant for a configurable product using the variant parameter. \n\n {# Result: '/p/productCode?vpc=small-green' #} \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#make_url"
+	},
+	"hypr MAKE_URL category ": {
+		"prefix": "hypr: make+category",
+		"body": [
+			"{% make_url 'category' ${1:categoryID} %}"
+		],
+		"description": "Hypr: The 'category' mode generates a path to a category page based on a category model, category code, or category ID. \n\n {# Result: '/c/1234' #} \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#make_url"
+	},
+	"hypr MAKE_URL facet ": {
+		"prefix": "hypr: make+facet",
+		"body": [
+			"{% make_url 'facet' ${1:facetValue} %}"
+		],
+		"description": "Hypr: The 'facet' mode generates a path to a faceting query based on a facet value. \n For example, the facet label might be 'Small' and the result of the make_url tag might be '?facetValueFilter=size%3ASmall' \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#make_url"
+	},
+	"hypr MAKE_URL sorting ": {
+		"prefix": "hypr: make+sorting",
+		"body": [
+			"{% make_url 'sorting' 'price:${1:desc},rating:${2:asc}' %}"
+		],
+		"description": "Hypr: The 'sorting' mode generates a path to a sort query with URL-encoded sort parameters. \n\n {# Result: '?sortBy=price%3Adesc%2Crating%3Aasc' #} \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#make_url"
+	},
+	"hypr MAKE_URL cdn ": {
+		"prefix": "hypr: make+cdn",
+		"body": [
+			"{% make_url 'cdn' '${1:path/to/file.js}' %}"
+		],
+		"description": "Hypr: The 'cdn' mode generates a URL on the CDN domain for your tenant, based on a full path to a filename, relative to root. Cache key appended to resul. \n\n {# Result: '//cdn.mozu.com/tenantID-siteID/path/to/file.js?_mzCb=54654986689' #} \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#make_url "
+	},
+	"hypr MAKE_URL paging ": {
+		"prefix": "hypr: make+paging",
+		"body": [
+			"{% make_url 'paging' ${1:productSearch} with page=${2:number} %}"
+		],
+		"description": "Hypr: The 'paging' mode generates a path to a specific page within a product search model. You can specify to create a path to the previous page, next page, first page, last page, or a specific page with the following fields or page number, which you use at the end of the tag preceded by the with page= phrase: \n- 'previous'\n- 'next'\n- 'first'\n- 'last'\n- zero-indexed page number \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#make_url "
+	},
+	"hypr MAKE_URL stylesheet ": {
+		"prefix": "hypr: make+stylesheet",
+		"body": [
+			"{% make_url 'stylesheet' 'stylesheets/${1:style.less}' %}"
+		],
+		"description": "Hypr: The 'stylesheet' mode generates a stylesheet link based on the stylesheet location. Complicated cache key appended to result. \n\n {# Result: '//cdn.mozu.com/tenantID-siteID//stylesheets/style.less?SBTHEME=~themeID&dt=8D2D95D6D734CC0-8D2D3E168157400' #} \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#make_url "
+	},
 }
