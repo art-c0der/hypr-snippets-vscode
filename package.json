@@ -1,0 +1,20 @@
+{
+    "name": "hyper-snippets",
+    "displayName": "Hyper Snippets",
+    "description": "Visual Studio Code Hyper Snippets",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.49.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "php",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
