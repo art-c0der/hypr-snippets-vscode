@@ -1,6 +1,6 @@
-# hyper-snippets README
+# hypr-snippets README
 
-This is the README for your extension "hyper-snippets". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "hypr-snippets". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
