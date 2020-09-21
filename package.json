@@ -19,6 +19,15 @@
     "engines": {
         "vscode": "^1.46.0"
     },
+    "icon": "images/icon-hypr.png",
+    "galleryBanner": {
+        "color": "#f66f62",
+        "theme": "dark"
+    },
+    "keywords": [
+        "snippet",
+        "hypr"
+    ],
     "categories": [
         "Snippets"
     ],
@@ -29,5 +38,9 @@
                 "path": "./snippets/snippets.code-snippets"
             }
         ]
+    },
+    "scripts": {
+        "package" : "vsce package",
+        "local" : "code --install-extension hypr-snippets-0.1.0.vsix"
     }
 }

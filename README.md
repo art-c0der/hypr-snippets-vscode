@@ -50,3 +50,7 @@ Please apply any [issues](https://github.com/Temu4/hypr-snippets/issues) or have
 
 - Add basic snippets. 
 - Add description of the extension in README.
+
+## License
+
+Please read [License](https://github.com/Temu4/hypr-snippets/blob/master/LICENSE.md) for more information.
