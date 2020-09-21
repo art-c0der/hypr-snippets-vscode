@@ -1,65 +1,52 @@
-# hypr-snippets README
+# Hypr Syntax Snippets
 
-This is the README for your extension "hypr-snippets". After writing up a brief description, we recommend including the following sections.
+Hypr syntax snippets for Visual Studio Code.
+
+## User Settings
+
+For better syntax hightlights you can define `.hypr` and `.hypr.live` files as `.php`.
+
+Open `Preferences` -> `Settings`
+
+```json
+    "files.associations": {
+      "*.hypr": "php",
+      "*.hypr.live": "php"
+    }
+```
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+* Hypr snippets
 
-For example if there is an image subfolder under your extension project workspace:
+## Hypr Snippets:
 
-\!\[feature X\]\(images/feature-x.png\)
+| Trigger               | Snippet                                    |
+|-----------------------|--------------------------------------------|
+| hypr: if              | {% if %}...{% endif %}                     |
+| hypr: if-else         | {% if %}...{% else %}...{% endif %}        |
+| hypr: for             | {% for %}...{% endfor %}                   |
+| hypr: for+reverse     | {% for reversed %}...{% endfor %}          |
+| hypr: comment         | {% comment %}...{% endcomment %}           |
+| hypr: label           | {{ labels...} }}                           |
+| hypr: include         | {% include ... %}                          |
+| hypr: include+options | {% include ... with ... %}                 |
+| hypr: make+image      | {% make_url 'image' ... with ... %}        |
+| hypr: make+product    | {% make_url 'product' ... with ... %}      |
+| hypr: make+category   | {% make_url 'category' ... %}              |
+| hypr: make+facet      | {% make_url 'facet' ... %}                 |
+| hypr: make+sorting    | {% make_url 'sorting' ... %}               |
+| hypr: make+cdn        | {% make_url 'cdn' ... %}                   |
+| hypr: make+paging     | {% make_url 'paging' ... with ... %}       |
+| hypr: make+stylesheet | {% make_url 'stylesheet' ... %}            |
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Contact
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Please apply any [issues](https://github.com/Temu4/hypr-snippets/issues) or have a suggestion please touch me in Linkedin [Artem Vorobiov](https://www.linkedin.com/in/artem-vorobiov/).
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.1.0
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- Add basic snippets. 
+- Add description of the extension in README.
