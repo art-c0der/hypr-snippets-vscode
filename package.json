@@ -17,7 +17,7 @@
         "url": "https://github.com/Temu4/hypr-snippets-vscode/issues"
     },
     "engines": {
-        "vscode": "^1.49.0"
+        "vscode": "^1.46.0"
     },
     "categories": [
         "Snippets"
