@@ -2,7 +2,20 @@
     "name": "hypr-snippets",
     "displayName": "Hypr Snippets",
     "description": "Visual Studio Code Hypr Snippets",
-    "version": "0.0.1",
+    "version": "0.1.0",
+    "publisher": "temu4",
+    "author": {
+        "name": "Artem Vorobiov",
+        "email": "artem.vorobjov@gmail.com"
+        },
+    "homepage": "https://github.com/Temu4/hypr-snippets-vscode",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Temu4/hypr-snippets-vscode"
+    },
+    "bugs": {
+        "url": "https://github.com/Temu4/hypr-snippets-vscode/issues"
+    },
     "engines": {
         "vscode": "^1.49.0"
     },
