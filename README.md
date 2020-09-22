@@ -2,6 +2,10 @@
 
 Hypr syntax snippets for Visual Studio Code.
 
+## Screenshot
+
+![Screenshot](https://github.com/Temu4/hypr-snippets/raw/master/images/screenshot.gif)
+
 ## User Settings
 
 For better syntax hightlights you can define `.hypr` and `.hypr.live` files as `.php`.
