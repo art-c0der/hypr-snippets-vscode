@@ -130,4 +130,75 @@
 		],
 		"description": "Hypr: The 'stylesheet' mode generates a stylesheet link based on the stylesheet location. Complicated cache key appended to result. \n\n {# Result: '//cdn.mozu.com/tenantID-siteID//stylesheets/style.less?SBTHEME=~themeID&dt=8D2D95D6D734CC0-8D2D3E168157400' #} \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#make_url "
 	},
+	"hypr FILTER ": {
+		"prefix": "hypr: filter",
+		"body": [
+			"{{ ${1:value}|${2:filter} }}"
+		],
+		"description": "Hypr: Appy filter to value. \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#Filter"
+	},
+	"hypr BLOCK": {
+		"prefix": "hypr: block",
+		"body": [
+			"{% block ${1:name} %}",
+			"$2",
+			"{% endblock ${1:name} %}"
+		],
+		"description": "Hypr: Encloses content that overrides content in parent templates or defines content that child templates can override. \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#block"
+	},
+	"hypr BLOCK with parent": {
+		"prefix": "hypr: block+parent",
+		"body": [
+			"{% block ${1:name} %}",
+			"{% parent %}",
+			"$2",
+			"{% endblock ${1:name} %}"
+		],
+		"description": "Hypr: Encloses content that overrides content in parent templates or defines content that child templates can override + content from the parent block. \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#block"
+	},
+	"hypr DROPZONE": {
+		"prefix": "hypr: dropzone",
+		"body": [
+			"{% dropzone zoneId='${1:bodybottom}' scope='${2:template}' %}"
+		],
+		"description": "Hypr: Renders an area (dropzone) in Site Builder where Admin users can drag and drop widgets on a page. The `scope` specifies the context for the dropzone: \n - 'page' \n - 'template' \n - 'site' \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#dropzone"
+	},
+	"hypr PRELOAD_JSON": {
+		"prefix": "hypr: preload_json",
+		"body": [
+			"{% preload_json ${1:model} '${2:product}' %}"
+		],
+		"description": "Hypr: This tag serializes an object into JSON and embeds the results in a <script> tag. The preload_jsontag takes two arguments: an object that is serialized into JSON and a name that helps construct the ID of the <script> tag that contains the results of the tag. \n\n {# Result 'The above code produces' <script id='data-mz-preload-product' type='text/json'>Serialized JSON of Product Model</script> #} \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#preload_json"
+	},
+	"hypr REQUIRE_SCRIPT": {
+		"prefix": "hypr: require_script",
+		"body": [
+			"{% require_script 'modules/${1:your-scripts}' %}"
+		],
+		"description": "Hypr: This tag takes one argument as the filename of the required script: {% require_script 'script' %}. The tag applies the .js extension to the filename you provide and assumes the scripts directory is the root folder for the path. \n\n {# Result 'The above code produces' <script id='data-mz-preload-product' type='text/json'>Serialized JSON of Product Model</script> #} \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#require_script"
+	},
+	"hypr SET_VAR": {
+		"prefix": "hypr: set_var",
+		"body": [
+			"{% set_var ${1:yourVar}=${2:someValue} %}"
+		],
+		"description": "Hypr: Assigns a value to a new variable of your choice. The variable persists in the global Hypr context for the rest of the render cycle. Note that this tag is only supported on Hypr. \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#set_var"
+	},
+	"hypr.live SET": {
+		"prefix": "hypr: set",
+		"body": [
+			"{% set ${1:yourVar}=${2:someValue} %}"
+		],
+		"description": "HyprLive: Assigns a value to a new variable of your choice. The variable persists in the global Hypr context for the rest of the render cycle. Note that this tag is only supported on HyprLive. \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#set_var"
+	},
+	"hypr WITH": {
+		"prefix": "hypr: with",
+		"body": [
+			"{% with ${1:HyprExpression} as ${2:variable} %}",
+			"$3",
+			"{% endwith %}",
+
+		],
+		"description": "Hypr: Assigns the value of a Hypr expression to a local variable that you can use within the scope of the tag. \n\n More info: https://www.mozu.com/docs/developer/themes/reference.htm#with"
+	},
 }
