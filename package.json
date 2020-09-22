@@ -2,7 +2,7 @@
     "name": "hypr-snippets",
     "displayName": "Hypr Snippets",
     "description": "Visual Studio Code Hypr Snippets",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "publisher": "temu4",
     "author": {
         "name": "Artem Vorobiov",
