@@ -1,4 +1,4 @@
-# Hypr Syntax Snippets
+# [Hypr Syntax Snippets](https://marketplace.visualstudio.com/items?itemName=temu4.hypr-snippets)
 
 Hypr syntax snippets for Visual Studio Code.
 
