@@ -34,7 +34,7 @@
     "contributes": {
         "snippets": [
             {
-                "language": "",
+                "language": "hypr",
                 "path": "./snippets/snippets.code-snippets"
             }
         ]
