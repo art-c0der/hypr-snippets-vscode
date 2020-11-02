@@ -1,23 +1,10 @@
-# [Hypr Syntax Snippets](https://marketplace.visualstudio.com/items?itemName=temu4.hypr-snippets)
+# [Hypr Snippets](https://marketplace.visualstudio.com/items?itemName=temu4.hypr-snippets)
 
-Hypr syntax snippets for Visual Studio Code.
+Hypr snippets for Visual Studio Code.
 
 ## Screenshot
 
 ![Screenshot](https://github.com/Temu4/hypr-snippets/raw/master/images/screenshot.gif)
-
-## User Settings
-
-For better syntax hightlights you can define `.hypr` and `.hypr.live` files as `.php`.
-
-Open `Preferences` -> `Settings`
-
-```json
-    "files.associations": {
-      "*.hypr": "php",
-      "*.hypr.live": "php"
-    }
-```
 
 ## Features
 
@@ -59,6 +46,10 @@ Open `Preferences` -> `Settings`
 Please apply any [issues](https://github.com/Temu4/hypr-snippets/issues) or have a suggestion please touch me in Linkedin [Artem Vorobiov](https://www.linkedin.com/in/artem-vorobiov/).
 
 ## Release Notes 
+
+### 0.1.2
+
+- Update README.
 
 ### 0.1.1
 
