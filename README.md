@@ -1,16 +1,15 @@
 # [Hypr Snippets](https://marketplace.visualstudio.com/items?itemName=temu4.hypr-snippets)
 
-Hypr snippets for Visual Studio Code.
+Hypr/HyperLive snippets for Visual Studio Code.
+
+> Related Hypr/HyperLive extension: [Hypr Syntax](https://marketplace.visualstudio.com/items?itemName=temu4.hypr-syntax)
 
 ## Screenshot
 
-![Screenshot](https://github.com/Temu4/hypr-snippets/raw/master/images/screenshot.gif)
+![Screenshot](https://github.com/Temu4/hypr-snippets-vscode/raw/master/images/screenshot.gif)
 
-## Features
 
-* Hypr snippets
-
-## Hypr Snippets:
+## Hypr/HyperLive Snippets:
 
 | Trigger               | Snippet                                    |
 |-----------------------|--------------------------------------------|
@@ -43,25 +42,16 @@ Hypr snippets for Visual Studio Code.
 
 ## Contact
 
-Please apply any [issues](https://github.com/Temu4/hypr-snippets/issues) or have a suggestion please touch me in Linkedin [Artem Vorobiov](https://www.linkedin.com/in/artem-vorobiov/).
+Please apply any [issues](https://github.com/Temu4/hypr-snippets-vscode/issues) or have a suggestion please touch me in Linkedin [Artem Vorobiov](https://www.linkedin.com/in/artem-vorobiov/).
 
 ## Release Notes 
 
-### 0.1.2
+### 0.1.4
 
 - Update README.
 
-### 0.1.1
-
-- Update README. 
-
-### 0.1.0
-
-- Add basic snippets. 
-- Add description of the extension in README.
-
-Please open [Changelog](https://github.com/Temu4/hypr-snippets/blob/master/CHANGELOG.md) for more information.
+Please open [Changelog](https://github.com/Temu4/hypr-snippets-vscode/blob/master/CHANGELOG.md) for more information.
 
 ## License
 
-Please read [License](https://github.com/Temu4/hypr-snippets/blob/master/LICENSE.md) for more information.
+Please read [License](https://github.com/Temu4/hypr-snippets-vscode/blob/master/LICENSE.md) for more information.

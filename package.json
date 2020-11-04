@@ -1,8 +1,8 @@
 {
     "name": "hypr-snippets",
     "displayName": "Hypr Snippets",
-    "description": "Visual Studio Code Hypr Snippets",
-    "version": "0.1.3",
+    "description": "Visual Studio Code Hypr/HyperLive snippets",
+    "version": "0.1.4",
     "publisher": "temu4",
     "author": {
         "name": "Artem Vorobiov",
@@ -26,6 +26,7 @@
     },
     "keywords": [
         "snippet",
+        "snippets",
         "hypr"
     ],
     "categories": [
@@ -41,6 +42,6 @@
     },
     "scripts": {
         "package": "vsce package",
-        "local": "code --install-extension hypr-snippets-0.1.3.vsix"
+        "local": "code --install-extension hypr-snippets-0.1.4.vsix"
     }
 }
