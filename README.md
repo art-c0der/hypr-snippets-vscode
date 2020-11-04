@@ -1,15 +1,15 @@
 # [Hypr Snippets](https://marketplace.visualstudio.com/items?itemName=temu4.hypr-snippets)
 
-Hypr/HyperLive snippets for Visual Studio Code.
+Hypr/HyprLive snippets for Visual Studio Code.
 
-> Related Hypr/HyperLive extension: [Hypr Syntax](https://marketplace.visualstudio.com/items?itemName=temu4.hypr-syntax)
+> Related Hypr/HyprLive extension: [Hypr Syntax](https://marketplace.visualstudio.com/items?itemName=temu4.hypr-syntax)
 
 ## Screenshot
 
 ![Screenshot](https://github.com/Temu4/hypr-snippets-vscode/raw/master/images/screenshot.gif)
 
 
-## Hypr/HyperLive Snippets:
+## Hypr/HyprLive Snippets:
 
 | Trigger               | Snippet                                    |
 |-----------------------|--------------------------------------------|

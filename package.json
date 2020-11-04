@@ -1,7 +1,7 @@
 {
     "name": "hypr-snippets",
     "displayName": "Hypr Snippets",
-    "description": "Visual Studio Code Hypr/HyperLive snippets",
+    "description": "Visual Studio Code Hypr/HyprLive snippets",
     "version": "0.1.4",
     "publisher": "temu4",
     "author": {

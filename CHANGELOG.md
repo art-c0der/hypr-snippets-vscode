@@ -6,7 +6,7 @@
 
 ### 0.1.3
 
-- Classified support only for Hypr/HyperLive files.
+- Classified support only for Hypr/HyprLive files.
 - Update README. 
 
 ### 0.1.2
